@@ -43,7 +43,6 @@ function Form() {
       <Paper>
         <Stack spacing={2}>
           <h2>Add event</h2>
-
           <FormControl>
             <InputLabel id="demo-simple-select-label">Project</InputLabel>
             <Select
