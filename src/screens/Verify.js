@@ -10,11 +10,9 @@ function Verify() {
 
   useEffect(() => {
     setToken(searchParams.get("token"));
-
     if (isVerified == null) {
       return;
     }
-    console.log(projects);
     if (projects.length > 0) {
       return navigate(`/form`, { state: { projects } });
     }
@@ -34,7 +32,7 @@ function Verify() {
     async function verifyToken() {
       try {
         const response = await fetch(
-          `${process.env.REACT_APP_NOT_SECRET_CODE}/verify`,
+          `${process.env.REACT_APP_API_URL}/verify`,
           options
         );
         const data = await response.json();
