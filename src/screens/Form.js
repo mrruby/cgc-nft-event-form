@@ -11,7 +11,7 @@ import {
 } from "@mui/material";
 import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
-import { DatePicker } from "@mui/x-date-pickers/DatePicker";
+import { DateTimePicker } from "@mui/x-date-pickers/DateTimePicker";
 import { useLocation } from "react-router-dom";
 
 function Form() {
@@ -62,8 +62,8 @@ function Form() {
             </Select>
           </FormControl>
           <LocalizationProvider dateAdapter={AdapterDateFns}>
-            <DatePicker
-              label="Date"
+            <DateTimePicker
+              label="DateTimePicker"
               value={date}
               onChange={(newValue) => {
                 console.log(newValue);
